@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "goldRates": {
+      "title": "Gold Rates Configuration",
+      "description": "Live gold rates, USD to BDT exchange, margins, custom overrides",
+      "type": "document",
+      "path": "config/goldRates",
+      "schema": {
+        "properties": {
+          "usdToBdt": { "type": "number" },
+          "goldUsdPerOz": { "type": "number" },
+          "base24kPerBhori": { "type": "number" },
+          "customOverride24k": { "type": "number" },
+          "makingChargePerBhori": { "type": "number" },
+          "vatPercentage": { "type": "number" },
+          "lastUpdated": { "type": "string" }
+        },
+        "required": ["usdToBdt", "goldUsdPerOz", "base24kPerBhori"]
+      }
+    },
+    "forecasts": {
+      "title": "Market Forecasts",
+      "description": "Gold market forecasts for 1 week and 1 month",
+      "type": "collection",
+      "path": "forecasts",
+      "schema": {
+        "properties": {
+          "period": { "type": "string" },
+          "title": { "type": "string" },
+          "expectedMin22kBhori": { "type": "number" },
+          "expectedMax22kBhori": { "type": "number" },
+          "trend": { "type": "string" },
+          "advice": { "type": "string" },
+          "adminNote": { "type": "string" },
+          "updatedAt": { "type": "string" }
+        },
+        "required": ["period", "expectedMin22kBhori", "expectedMax22kBhori"]
+      }
+    },
+    "userPayments": {
+      "title": "User Payments and Subscriptions",
+      "description": "User payments for premium access",
+      "type": "collection",
+      "path": "userPayments",
+      "schema": {
+        "properties": {
+          "userName": { "type": "string" },
+          "userPhone": { "type": "string" },
+          "method": { "type": "string" },
+          "targetNumber": { "type": "string" },
+          "trxId": { "type": "string" },
+          "amount": { "type": "number" },
+          "status": { "type": "string" },
+          "createdAt": { "type": "string" },
+          "expiresAt": { "type": "string" }
+        },
+        "required": ["userPhone", "trxId", "status"]
+      }
+    }
+  }
+}

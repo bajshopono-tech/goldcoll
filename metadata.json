@@ -1,0 +1,6 @@
+{
+  "name": "স্বর্ণের বাজার বিশ্লেষণ",
+  "description": "লাইভ গোল্ড প্রাইস, ২৪কে, ২২কে, ২১কে, ১৮কে ও সনাতন গোল্ড রেট, ট্রেডিংভিউ চার্ট, পূর্বাভাস, বিডি পেমেন্ট ও পোর্টফোলিও",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
